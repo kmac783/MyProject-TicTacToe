@@ -21,11 +21,17 @@ p {
     font-size: 18px;
     text-align: center;
 }
+
 content {
     display: flex;
     justify-content: center;
 }
 
+button {
+    border-radius: 10px;
+    height: 30px;
+    width: 75px;
+}
 footer {
     background-color: #fff;
     height: 100px;
@@ -34,6 +40,7 @@ footer {
 .game {
     width: 320px;
     height: 320px;
+    border-radius: 10px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -45,14 +52,16 @@ footer {
 .box {
     width: 100px;
     height: 100px;
-    background-color: #d1aff1;
+    background-color: #fff;
     margin: 0;
     padding: 0;
     cursor: pointer;
     text-align: center;
     font-family: sans-serif;
-    font-size: 100px;
+    font-size: 50px;
 }
+
+
 .box:hover {
     background-color: #f0eeee;
 }
@@ -65,10 +74,14 @@ footer {
     border-left: 10px solid #000;
 }
 
-.score {
-    width: 320px;
+.winner {
+    color:red;
+}
+
+/* .score {
+    width: 400px;
     height: 320px;
     background-color: #96e9cd;
     margin-left: -100px;
 
-}
+} */
