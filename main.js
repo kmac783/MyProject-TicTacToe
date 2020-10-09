@@ -18,7 +18,7 @@ const gridButtons = document.querySelectorAll('.box');
 let gameStatus = '';
 const displayMessage=document.querySelector('.game-status');
 //Player 1 will choose the first box to place their X. Also cannot choose the same box twice.
-
+let resetButton = document.querySelector('.reset');
 
 gameContainer.addEventListener('click',(event)=>{
     //console.log('Button Group Container Clicked')
@@ -41,13 +41,6 @@ gameContainer.addEventListener('click',(event)=>{
         
         })
         //console.log('current player');
-        
-
-
-//The selections will continue until a draw or a win.
-//You will need to run through the array of winning Combos to determine if it is a win or not.
-
-
 function gamePlay() {
     if (document.getElementById('b0').innerText === 'X' && document.getElementById('b1').innerText === 'X' && document.getElementById('b2').innerText === 'X') 
             { 
@@ -133,7 +126,7 @@ function gamePlay() {
     else if (document.getElementById('b0').innerText !== '' && document.getElementById('b1').innerText !== '' && document.getElementById('b2').innerText !== '' && document.getElementById('b3').innerText !== '' && document.getElementById('b4').innerText !== '' && document.getElementById('b5').innerText !== '' && document.getElementById('b6').innerText !== '' && document.getElementById('b7').innerText !== '' && document.getElementById('b8').innerText !== '')
      {
         displayMessage.innerHTML = `Nobody Wins Play AGAIN!`;
-            //console.log(gameStatus = 'Draw'); 
+            //console.log(gameStatus = 'Drawg'); 
        
     }
 
@@ -151,14 +144,20 @@ function gamePlay() {
 
 //Game should reset after a Win/Lose/Draw result if the players choose Play Again.
 
+
 function restartGame() {
     //gameActive = true;
     currentPlayer = "X";
     //gameState = ["", "", "", "", "", "", "", "", ""];
-    displayMessage.innerHTML = `${currentPlayer} is next`;
+    displayMessage.innerHTML = `Try Again`;
     document.querySelectorAll('.box')
                .forEach(element => element.innerHTML = "");
 }
+resetButton.addEventListener('click', (event)=> {
+    event.preventDefault();
+    // console.log(event.button);
+    restartGame()
+})
 
 
 
