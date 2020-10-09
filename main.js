@@ -5,6 +5,12 @@ let currentPlayer = 'X';
 const PlayerTurn= function(){
     return `Player ${currentPlayer} turn`;
 }   
+let gameWinner='';
+const playerWins= function(){
+    displayMessage.innerHTML = `${gameWinner} wins`;
+    
+}
+
 const gameContainer = document.querySelector('.game');
 //console.log(gameContainer);
 const gridButtons = document.querySelectorAll('.box');
@@ -44,90 +50,91 @@ gameContainer.addEventListener('click',(event)=>{
 
 function gamePlay() {
     if (document.getElementById('b0').innerText === 'X' && document.getElementById('b1').innerText === 'X' && document.getElementById('b2').innerText === 'X') 
-            {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win'); 
+            { 
+            displayMessage.innerHTML = `You win!`;
+            //console.log(gameStatus = 'Win'); 
 
             } 
         else if (document.getElementById('b3').innerText === 'X' && document.getElementById('b4').innerText === 'X' && document.getElementById('b5').innerText === 'X') 
             {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win');         
+                displayMessage.innerHTML = `You win!`;
+                //console.log(gameStatus = 'Win');          
             } 
         else if (document.getElementById('b6').innerText === 'X' && document.getElementById('b7').innerText === 'X' && document.getElementById('b8').innerText === 'X') 
             {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win');         
+                displayMessage.innerHTML = `You win!`;
+                //console.log(gameStatus = 'Win');        
             } 
         else if (document.getElementById('b0').innerText === 'O' && document.getElementById('b1').innerText === 'O' && document.getElementById('b2').innerText === 'O') 
             {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win');         
+                displayMessage.innerHTML = `You win!`;
+                //console.log(gameStatus = 'Win');        
             } 
         else if (document.getElementById('b3').innerText === 'O' && document.getElementById('b4').innerText === 'O' && document.getElementById('b5').innerText === 'O') 
             {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win');         
+                displayMessage.innerHTML = `You win!`;
+                //console.log(gameStatus = 'Win');        
             } 
         else if (document.getElementById('b6').innerText === 'O' && document.getElementById('b7').innerText === 'O' && document.getElementById('b8').innerText === 'O') 
             {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win');         
+                displayMessage.innerHTML = `You win!`;
+                //console.log(gameStatus = 'Win');         
             }
         else if (document.getElementById('b0').innerText === 'X' && document.getElementById('b4').innerText === 'X' && document.getElementById('b8').innerText === 'X') 
             {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win');         
+                displayMessage.innerHTML = `You win!`;
+                //console.log(gameStatus = 'Win');     
             } 
         else if (document.getElementById('b2').innerText === 'X' && document.getElementById('b4').innerText === 'X' && document.getElementById('b6').innerText === 'X') 
             {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win');         
+                displayMessage.innerHTML = `You win!`;
+                //console.log(gameStatus = 'Win');        
             } 
         else if (document.getElementById('b0').innerText === 'X' && document.getElementById('b3').innerText === 'X' && document.getElementById('b6').innerText === 'X') 
                 {
-            alert("Game Won. Play Again")
-            console.log(gameStatus = 'Win');         
+                 displayMessage.innerHTML = `You win!`;
+                 //console.log(gameStatus = 'Win');         
             } 
         else if (document.getElementById('b0').innerText === 'O' && document.getElementById('b4').innerText === 'O' && document.getElementById('b8').innerText === 'O') 
                 {
-                alert("Game Won. Play Again")
-                console.log(gameStatus = 'Win');         
+                    displayMessage.innerHTML = `You win!`;
+                    //console.log(gameStatus = 'Win');       
                 } 
         else if (document.getElementById('b2').innerText === 'O' && document.getElementById('b4').innerText === 'O' && document.getElementById('b6').innerText === 'O') 
                 {
-                alert("Game Won. Play Again")
-                console.log(gameStatus = 'Win');         
+                    displayMessage.innerHTML = `You win!`;
+                    //console.log(gameStatus = 'Win');        
                 } 
         else if (document.getElementById('b0').innerText === 'O' && document.getElementById('b3').innerText === 'O' && document.getElementById('b6').innerText === 'O') 
                 {
-                alert("Game Won. Play Again")
-                console.log(gameStatus = 'Win');         
+                    displayMessage.innerHTML = `You win!`;
+                    //console.log(gameStatus = 'Win');     
                 }
         else if (document.getElementById('b1').innerText === 'X' && document.getElementById('b4').innerText === 'X' && document.getElementById('b7').innerText === 'X') 
                 {
-                alert("Game Won. Play Again")
-                console.log(gameStatus = 'Win');         
+                    displayMessage.innerHTML = `You win!`;
+                    //console.log(gameStatus = 'Win');       
                 } 
         else if (document.getElementById('b2').innerText === 'X' && document.getElementById('b5').innerText === 'X' && document.getElementById('b8').innerText === 'X') 
                 {
-                alert("Game Won. Play Again")
-                console.log(gameStatus = 'Win');         
+                    displayMessage.innerHTML = `You win!`;
+                    //console.log(gameStatus = 'Win');         
                 }  
         else if (document.getElementById('b1').innerText === 'O' && document.getElementById('b4').innerText === 'O' && document.getElementById('b7').innerText === 'O') 
                 {
-                alert("Game Won. Play Again")
-                console.log(gameStatus = 'Win');         
+                    displayMessage.innerHTML = `You win!`;
+                    //console.log(gameStatus = 'Win');        
                 } 
         else if (document.getElementById('b2').innerText === 'O' && document.getElementById('b5').innerText === 'O' && document.getElementById('b8').innerText === 'O') 
                 {
-                alert("Game Won. Play Again")
-                console.log(gameStatus = 'Win');         
+                    displayMessage.innerHTML = `You win!`;
+                    //console.log(gameStatus = 'Win');       
                 } 
     else if (document.getElementById('b0').innerText !== '' && document.getElementById('b1').innerText !== '' && document.getElementById('b2').innerText !== '' && document.getElementById('b3').innerText !== '' && document.getElementById('b4').innerText !== '' && document.getElementById('b5').innerText !== '' && document.getElementById('b6').innerText !== '' && document.getElementById('b7').innerText !== '' && document.getElementById('b8').innerText !== '')
      {
-        alert("It's a Draw Nobody Won. Play Again")
-        console.log(gameStatus = 'Draw');
+        displayMessage.innerHTML = `Nobody Wins Play AGAIN!`;
+            //console.log(gameStatus = 'Draw'); 
+       
     }
 
     
@@ -144,14 +151,15 @@ function gamePlay() {
 
 //Game should reset after a Win/Lose/Draw result if the players choose Play Again.
 
-// function handleRestartGame() {
-//     //gameActive = true;
-//     currentPlayer = "X";
-//     //gameState = ["", "", "", "", "", "", "", "", ""];
-//     gameStatus.innerHTML = `${currentPlayer} is next`;
-//     document.querySelectorAll('.box')
-//                .forEach(cell => cell.innerHTML = "");
-// }
+function restartGame() {
+    //gameActive = true;
+    currentPlayer = "X";
+    //gameState = ["", "", "", "", "", "", "", "", ""];
+    displayMessage.innerHTML = `${currentPlayer} is next`;
+    document.querySelectorAll('.box')
+               .forEach(element => element.innerHTML = "");
+}
+
 
 
 //Players should NOT be able to continue playing once there is a win/lose/draw.
