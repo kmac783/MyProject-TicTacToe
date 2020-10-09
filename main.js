@@ -2,15 +2,15 @@ console.log('im working');
 
 //There will be two players to start the game.
 let currentPlayer = 'X';
-    
+const PlayerTurn= function(){
+    return `Player ${currentPlayer} turn`;
+}   
 const gameContainer = document.querySelector('.game');
 //console.log(gameContainer);
 const gridButtons = document.querySelectorAll('.box');
 //console.log(gridButtons);
-//const gameItems = 
-//console.log(gameItems);
-
-
+let gameStatus = '';
+const displayMessage=document.querySelector('.game-status');
 //Player 1 will choose the first box to place their X. Also cannot choose the same box twice.
 
 
@@ -22,9 +22,13 @@ gameContainer.addEventListener('click',(event)=>{
             event.target.innerText = currentPlayer;
             if (currentPlayer === 'X'){
                 currentPlayer = 'O'
+                console.log(currentPlayer);
+                displayMessage.innerHTML=PlayerTurn();
                 //this will check to see if the player's text is X if it is it will change it to O
             } else {
             currentPlayer = 'X'
+            console.log(currentPlayer);
+            displayMessage.innerHTML=PlayerTurn();
             //this will prepare for the next player turn
             }
         gamePlay();
@@ -36,7 +40,7 @@ gameContainer.addEventListener('click',(event)=>{
 
 //The selections will continue until a draw or a win.
 //You will need to run through the array of winning Combos to determine if it is a win or not.
-let gameStatus = '';
+
 
 function gamePlay() {
     if (document.getElementById('b0').innerText === 'X' && document.getElementById('b1').innerText === 'X' && document.getElementById('b2').innerText === 'X') 
@@ -128,8 +132,9 @@ function gamePlay() {
 
     
 }
-console.log(gameStatus);
+//console.log(gameStatus);
        
+
 //Is a draw when there is no more chances to win or the board is full? Is that the same thing?
 //when the board is full AND no body won
 
@@ -139,9 +144,14 @@ console.log(gameStatus);
 
 //Game should reset after a Win/Lose/Draw result if the players choose Play Again.
 
-// const gameReset = document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
-// ;
-//console.log(gameReset);
+// function handleRestartGame() {
+//     //gameActive = true;
+//     currentPlayer = "X";
+//     //gameState = ["", "", "", "", "", "", "", "", ""];
+//     gameStatus.innerHTML = `${currentPlayer} is next`;
+//     document.querySelectorAll('.box')
+//                .forEach(cell => cell.innerHTML = "");
+// }
 
 
 //Players should NOT be able to continue playing once there is a win/lose/draw.
