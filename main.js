@@ -15,7 +15,7 @@ const gameContainer = document.querySelector('.game');
 const gridButtons = document.querySelectorAll('.box');
 //console.log(gridButtons);
 let gameStatus = '';
-const displayMessage = document.querySelector('.game-status');
+const displayMessage = document.querySelector('.game-play');
 //Player 1 will choose the first box to place their X. Also cannot choose the same box twice.
 let resetButton = document.querySelector('.reset');
 
@@ -112,7 +112,7 @@ function gamePlay() {
     }
     else if (document.getElementById('b0').innerText !== '' && document.getElementById('b1').innerText !== '' && document.getElementById('b2').innerText !== '' && document.getElementById('b3').innerText !== '' && document.getElementById('b4').innerText !== '' && document.getElementById('b5').innerText !== '' && document.getElementById('b6').innerText !== '' && document.getElementById('b7').innerText !== '' && document.getElementById('b8').innerText !== '') {
         displayMessage.innerHTML = `Nobody Wins Play AGAIN!`;
-        //console.log(gameStatus = 'Drawg'); 
+        //console.log(gameStatus = 'Draw'); 
 
     }
 
