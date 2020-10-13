@@ -5,30 +5,35 @@ let currentPlayer = 'X';
 const PlayerTurn = function () {
     return `Player ${currentPlayer} turn`;
 }
-let gameWinner = '';
-const playerWins = function () {
-    displayMessage.innerHTML = `${gameWinner} wins`;
 
-}
 const gameContainer = document.querySelector('.game');
 //console.log(gameContainer);
 const gridButtons = document.querySelectorAll('.box');
 //console.log(gridButtons);
-let gameStatus = '';
+
 const displayMessage = document.querySelector('.game-play');
 //Player 1 will choose the first box to place their X. Also cannot choose the same box twice.
 let resetButton = document.querySelector('.reset');
+let gameStatus = displayMessage.innerHTML = 'Ready to Play!';
+
+let playerWins = function () {
+    //console.log(playerTurn);
+    displayMessage.innerHTML = `${currentPlayer} wins!`;
+}
+
 
 
 gameContainer.addEventListener('click', (event) => {
     //console.log('Button Group Container Clicked');
     //console.log(event.target.getAttribute('id'));
     if (event.target.innerText === '') {//checks for empty box
-        console.log('blah');
+        
+        //console.log('blah');
+        
         event.target.innerText = currentPlayer;
         if (currentPlayer === 'X') {
             currentPlayer = 'O'
-            console.log(event.target);
+            //console.log(event.target);
             displayMessage.innerHTML = PlayerTurn();
             //this will check to see if the player's text is X if it is it will change it to O
         } else {
@@ -41,12 +46,14 @@ gameContainer.addEventListener('click', (event) => {
         //checks for full box 
         //i need to turn off click
         gamePlay();
+
+    
     }
 })
 //console.log('current player');
 function gamePlay() {
     if (document.getElementById('b0').innerText === 'X' && document.getElementById('b1').innerText === 'X' && document.getElementById('b2').innerText === 'X') {
-        displayMessage.innerHTML = `You win!`;
+        displayMessage.innerHTML = `You Win!`;
         //console.log(gameStatus = 'Win'); 
 
     }
@@ -135,12 +142,13 @@ function restartGame() {
     //gameActive = true;
     currentPlayer = "X";
     //gameState = ["", "", "", "", "", "", "", "", ""];
-    displayMessage.innerHTML = `Try Again`;
+    //displayMessage.innerHTML = `Try Again`;
     document.querySelectorAll('.box')
         .forEach(element => element.innerHTML = "");
 }
 resetButton.addEventListener('click', (event) => {
     event.preventDefault();
+    displayMessage.innerHTML = `Let's play again?`
     // console.log(event.button);
     restartGame()
 })
@@ -148,6 +156,8 @@ resetButton.addEventListener('click', (event) => {
 
 
 //Players should NOT be able to continue playing once there is a win/lose/draw.
-
+// const gameOver = document.
+// gameContainer.removeEventListener('click', (event))
 
 //Page should not refresh in order to play again.
+//done.
