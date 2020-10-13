@@ -15,8 +15,10 @@ const gridButtons = document.querySelectorAll('.box');
 const displayMessage = document.querySelector('.game-play');
 //Player 1 will choose the first box to place their X. Also cannot choose the same box twice.
 let resetButton = document.querySelector('.reset');
+
 let gameStatus = displayMessage.innerHTML = 'Ready to Play!';
 //console.log(gameStatus);
+
 let playerWins = function () {
     //console.log(playerWins);
     gameOver = true
@@ -145,16 +147,16 @@ function gamePlay() {
 
 //Game should reset after a Win/Lose/Draw result if the players choose Play Again.
 function restartGame() {
-    //gameActive = true;
+    gameOver = false;
     currentPlayer = "X";
     //gameState = ["", "", "", "", "", "", "", "", ""];
-    //displayMessage.innerHTML = `Try Again`;
+    displayMessage.innerHTML = `Try Again`;
     document.querySelectorAll('.box')
         .forEach(element => element.innerHTML = "");
 }
 resetButton.addEventListener('click', (event) => {
     event.preventDefault();
-    displayMessage.innerHTML = `Let's play again?`
+    //displayMessage.innerHTML = `Let's play again?`
     // console.log(event.button);
     console.log('Clear');
     restartGame()
