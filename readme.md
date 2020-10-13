@@ -8,6 +8,12 @@ Built in HTML, CSS and driven by Javascript you can easily participate in **one 
 
 Accessible via mobile or desktop, this game will keep those kids busy for hours in the car. 
 
+This simple game version includes the ability to: 
+-- Start a game with two players
+-- Track who's turn it is next
+-- Track if the players win or draw
+-- Reset the game board to play again
+
 ———
 
 ## Wireframing 
@@ -32,7 +38,9 @@ Also I included a text H2 tag to show messages for play - who's turn, if the pla
 
 ## Unsolved issues for Future Iterations
 
-— Would like to have the button text change - start with Play, change to Play Again when one person wins, b/c you don’t really need a Play button to start the play, you just click on the board. 
+-- Would like to have the button text change - start with Play, change to Play Again when one person wins, b/c you don’t really need a Play button to start the play, you just click on the board. 
+
+-- I had origially planned on including a scoreboard, but I think my player toggling will make that difficult. TBD.
 
 ———
 
