@@ -30,8 +30,6 @@ button {
     height: 30px;
     width: 85px;
 
-    
-
 }
 
 content {
@@ -100,3 +98,44 @@ footer {
     margin-left: -100px;
 
 } */
+
+@media only screen and (max-device-width: 480px) {
+    body {
+        width: 310px;
+        margin: auto;
+    }
+    h1 {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1em;
+        color: #008000;
+        margin: 0px 25px 0px 0px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    button {
+        border-radius: 10px;
+        height: 20px;
+        width: 50px;
+    
+    }
+
+    .game {
+        width: 135px;
+        height: 135px;
+    }
+    
+    .box {
+        width: 40px;
+        height: 40px;
+        font-size: 2em;
+    }
+    #b0, #b1, #b2, #b3, #b4, #b5 {
+        border-bottom: 5px solid #000;
+    }
+    
+    #b2, #b5, #b8, #b1, #b4, #b7 {
+        border-left: 5px solid #000;
+    }
+}
